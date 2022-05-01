@@ -21,9 +21,9 @@ do
             exit 1
             ;;
         v)
-            USER=`id -un`
             echo Crea struttura MHL
             sleep 2
+            USER=`id -un`
             ascmhl create -v --author_name $USER $2
             exit 1
             ;;
