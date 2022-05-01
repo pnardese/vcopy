@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    echo "Usare -v per creare mhl o -c per copiare"
+    exit 1
+fi
+
 while getopts ":cv" opt;
 do
     case $opt in
@@ -22,7 +29,7 @@ do
             ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
-            echo "Usare -v o -c"
+            echo "Usare -v per creare mhl o -c per copiare"
             exit 1
             ;;
     esac
